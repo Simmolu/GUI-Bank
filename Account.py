@@ -1,14 +1,15 @@
 
 class Account:
     accountNum = 0
-    startingBalance = 0
     uName = ""
     pWord = ""
 
-    def __init__(self, username, password, num):
+    def __init__(self, username, password, num, time):
         self.uName = username
         self.pWord = password
         self.accountNum = num
+        self.timeCreated = time
+        self.balance = 0
         return
 
     def deposit(self, username, password, amount):
@@ -16,5 +17,4 @@ class Account:
 
     def withdrawl(self, username, password, amount):
         return
-
 
