@@ -1,5 +1,9 @@
 from tkinter import messagebox
-from Account import Account
+import Account
+
+
+
+
 
 class Bank:
     numAccounts = -1
