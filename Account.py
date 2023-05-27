@@ -1,4 +1,4 @@
-
+from tkinter import messagebox
 class Account:
     accountNum = 0
     uName = ""
@@ -12,9 +12,17 @@ class Account:
         self.balance = 0
         return
 
-    def deposit(self, username, password, amount):
-        return
+    def deposit(self, amount):
+        self.balance += amount
+        messagebox.showinfo("$", "$" + str(amount) + " successfully deposited.")
+        return True
 
-    def withdrawl(self, username, password, amount):
-        return
+    def withdraw(self, amount):
+        if amount > self.balance:
+            messagebox.showerror("$", "Not enough funds. Please try again later.")
+            return
+        else:
+            self.balance -= amount
+            messagebox.showinfo("$", "$" + str(amount) + " successfully withdrawn.")
+            return
 
